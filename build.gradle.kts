@@ -6,6 +6,7 @@ plugins {
     id("io.micronaut.application") version "4.0.4"
     id("io.micronaut.test-resources") version "4.0.4"
     id("io.micronaut.aot") version "4.0.4"
+    kotlin("jvm") version "1.9.20-Beta2"
 }
 
 version = "0.1"
@@ -38,7 +39,6 @@ application {
     mainClass.set("com.example.ApplicationKt")
 }
 java {
-    sourceCompatibility = JavaVersion.toVersion("11")
 }
 
 tasks {
@@ -76,3 +76,6 @@ micronaut {
 
 
 
+kotlin {
+    jvmToolchain(11)
+}
